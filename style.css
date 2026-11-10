@@ -1,0 +1,247 @@
+/* Miellerie de Provence — landingspagina
+   Huisstijl: rood #752323 (hoofdkleur) · paars #721E44 (accent) · crème #E8CAB0
+   Fonts: Bebas Neue (headlines) · Pinyon Script (sublines) · Cormorant Garamond (tekst, CTA) */
+
+:root{
+  --red:#752323;
+  --red-deep:#4a1414;
+  --red-dark:#2a0b0b;
+  --purple:#721E44;
+  --cream:#E8CAB0;
+  --cream-soft:#f4e6d8;
+  --ink:#140707;
+  --f-head:"Bebas Neue", Impact, sans-serif;
+  --f-script:"Pinyon Script", cursive;
+  --f-body:"Cormorant Garamond", Georgia, serif;
+  --max:1180px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--f-body);
+  font-size:clamp(1.1rem,1rem + .35vw,1.3rem);
+  line-height:1.55;
+  color:var(--cream);
+  background:var(--red-dark);
+}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-head);font-weight:400;letter-spacing:.02em;line-height:.95;margin:0 0 .4em}
+h1{font-size:clamp(3.6rem,2rem + 7vw,8rem)}
+h2{font-size:clamp(2.6rem,1.6rem + 3.6vw,4.6rem)}
+h3{font-size:2rem}
+p{margin:0 0 1em}
+.script{font-family:var(--f-script);font-size:clamp(1.8rem,1.4rem + 1.4vw,2.6rem);line-height:1;margin:0 0 .25em;color:var(--cream)}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--cream);outline-offset:4px}
+
+/* Rode grunge-textuur, zoals op de socials */
+.texture{
+  background-color:var(--red);
+  background-image:url("assets/texture-grunge.jpg");
+  background-size:cover;
+  background-position:center;
+  background-blend-mode:multiply;
+}
+
+/* Knoppen */
+.btn{
+  display:inline-block;
+  font-family:var(--f-head);
+  font-size:1.35rem;
+  letter-spacing:.08em;
+  text-decoration:none;
+  padding:.85em 1.8em .7em;
+  background:var(--cream);
+  color:var(--red-deep);
+  border:1px solid var(--cream);
+  border-radius:2px;
+  transition:background .25s,color .25s,transform .25s;
+}
+.btn:hover{background:transparent;color:var(--cream);transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--cream)}
+.btn--ghost:hover{background:var(--cream);color:var(--red-deep)}
+.btn--small{font-size:1.05rem;padding:.6em 1.2em .5em}
+
+/* Navigatie */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:10;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1rem clamp(1rem,4vw,3rem);
+  background:linear-gradient(to bottom,rgba(20,7,7,.75),rgba(20,7,7,0));
+}
+.nav__logo{font-family:var(--f-head);font-size:1.6rem;letter-spacing:.06em;text-decoration:none}
+.nav__logo span,.footer__logo span{font-family:var(--f-script);font-size:1.3em;letter-spacing:0;margin-left:.15em}
+.nav__links{display:flex;align-items:center;gap:1.6rem}
+.nav__links a:not(.btn){font-family:var(--f-head);letter-spacing:.08em;font-size:1.1rem;text-decoration:none;opacity:.85}
+.nav__links a:not(.btn):hover{opacity:1}
+
+/* Hero */
+.hero{
+  position:relative;min-height:100svh;
+  display:grid;place-items:center;text-align:center;
+  overflow:hidden;padding:7rem 1.5rem 5rem;
+}
+.hero__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero__overlay{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at center,rgba(117,35,35,.35) 0%,rgba(42,11,11,.85) 75%),
+    linear-gradient(to bottom,rgba(42,11,11,.2),rgba(42,11,11,.9));
+}
+.hero__content{position:relative;max-width:900px}
+.hero__sub{max-width:40rem;margin:0 auto 2rem;font-size:clamp(1.2rem,1rem + .6vw,1.5rem)}
+.hero__actions{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+.hero__scroll{
+  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
+  font-size:1.6rem;text-decoration:none;opacity:.7;animation:float 2.4s ease-in-out infinite;
+}
+@keyframes float{50%{transform:translate(-50%,8px)}}
+
+/* Secties algemeen */
+section{padding:clamp(4rem,8vw,8rem) clamp(1.25rem,5vw,3rem)}
+.section-head{text-align:center;max-width:46rem;margin:0 auto 3rem}
+
+/* Verhaal */
+.story{
+  display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);
+  gap:clamp(2rem,6vw,6rem);align-items:center;
+}
+.story>*{max-width:var(--max)}
+.story__visual{margin:0;justify-self:end;max-width:480px;width:100%}
+.story__visual img{width:100%;height:auto;box-shadow:0 30px 60px rgba(0,0,0,.55)}
+.story__text{max-width:36rem}
+.story__sign{font-family:var(--f-script);font-size:2rem;line-height:1.2;color:var(--cream)}
+.features{list-style:none;padding:0;margin:2rem 0 0;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 2rem}
+.features li{border-top:1px solid rgba(232,202,176,.35);padding-top:.8rem;font-size:1.05rem}
+.features strong{display:block;font-family:var(--f-head);font-weight:400;font-size:1.35rem;letter-spacing:.05em}
+
+/* Geuren */
+.scents{background:var(--red-dark)}
+.scent-list{
+  list-style:none;margin:0 auto;padding:0;max-width:var(--max);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;
+}
+.scent{
+  position:relative;padding:2rem 1.5rem 1.6rem;
+  border:1px solid rgba(232,202,176,.25);
+  background:linear-gradient(160deg,rgba(117,35,35,.45),rgba(114,30,68,.25));
+  transition:transform .3s,border-color .3s;
+}
+.scent:hover{transform:translateY(-4px);border-color:var(--cream)}
+.scent__no{font-family:var(--f-head);font-size:1rem;letter-spacing:.2em;opacity:.6}
+.scent h3{margin-top:.4rem;margin-bottom:.1em}
+.scent__tag{font-family:var(--f-script);font-size:1.6rem;line-height:1.1}
+.scent p{font-size:1.05rem}
+.scent__notes{font-style:italic;opacity:.8;margin:0}
+
+/* Galerij */
+.gallery__grid{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;align-items:start;
+}
+.gallery figure{margin:0}
+.gallery img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;box-shadow:0 20px 40px rgba(0,0,0,.5);transition:transform .4s}
+.gallery figure:hover img{transform:scale(1.02)}
+.gallery figcaption{font-family:var(--f-head);letter-spacing:.1em;margin-top:.8rem;text-align:center}
+
+/* Reviews */
+.reviews{
+  background:var(--purple);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;
+}
+.reviews blockquote{margin:0 auto;max-width:22rem;text-align:center}
+.reviews p{font-size:1.3rem;font-style:italic}
+.reviews cite{font-family:var(--f-head);font-style:normal;letter-spacing:.12em}
+.reviews cite::before{content:"★★★★★";display:block;letter-spacing:.2em;margin-bottom:.3rem;color:var(--cream)}
+
+/* Inschrijven */
+.signup{
+  display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center;
+}
+.signup__text{max-width:32rem;justify-self:end}
+.signup__small{font-size:1rem;opacity:.8}
+.signup__form{max-width:32rem;width:100%}
+/* MailerLite-formulier in de huisstijl */
+.ml-form-embedWrapper{
+  background:rgba(20,7,7,.82);
+  border:1px solid rgba(232,202,176,.35);
+  padding:clamp(1.5rem,4vw,2.5rem);
+  box-shadow:0 30px 60px rgba(0,0,0,.45);
+}
+.ml-form-embedWrapper h4{font-family:var(--f-head);font-weight:400;font-size:2.2rem;letter-spacing:.04em;margin:0 0 .2em}
+.ml-form-embedPermissions h4{font-size:1.3rem;margin-top:1.4rem}
+.ml-form-embedWrapper p{font-size:1.05rem}
+.ml-form-fieldRow{margin-bottom:.8rem}
+.ml-form-embedWrapper .form-control{
+  width:100%;padding:.85rem 1rem;
+  font:inherit;font-size:1.1rem;color:var(--ink);
+  background:var(--cream-soft);border:1px solid var(--cream);border-radius:2px;
+}
+.ml-form-embedWrapper .form-control::placeholder{color:#7d5a52}
+.ml-form-embedWrapper .form-control:focus{outline:2px solid var(--purple);outline-offset:1px}
+.ml-form-embedWrapper .ml-error .form-control{border-color:#ff9a9a;background:#ffe9e9}
+.ml-form-embedPermissionsOptionsCheckbox{margin:.8rem 0}
+.ml-form-embedPermissionsOptionsCheckbox label{display:flex;align-items:center;gap:.6rem;cursor:pointer;font-weight:600}
+.ml-form-embedPermissionsOptionsCheckbox input{width:1.1rem;height:1.1rem;accent-color:var(--purple)}
+.ml-form-embedPermissionsOptionsCheckbox .description{font-size:.95rem;font-style:italic;opacity:.85;margin-left:1.7rem}
+.ml-form-embedMailerLite-GDPR p{font-size:.9rem;opacity:.7}
+.ml-form-embedSubmit button{
+  width:100%;margin-top:.6rem;cursor:pointer;
+  font-family:var(--f-head);font-size:1.5rem;letter-spacing:.1em;
+  padding:.8rem 1rem .65rem;border-radius:2px;
+  background:var(--purple);color:var(--cream);border:1px solid var(--purple);
+  transition:background .25s,color .25s;
+}
+.ml-form-embedSubmit button:hover{background:var(--cream);color:var(--purple)}
+.ml-form-embedSubmitLoad{display:inline-block;width:1.2rem;height:1.2rem;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ml-form-successContent{text-align:center;padding:1rem 0}
+
+/* FAQ */
+.faq{background:var(--red-dark);max-width:none}
+.faq details{max-width:48rem;margin:0 auto;border-bottom:1px solid rgba(232,202,176,.3)}
+.faq summary{
+  cursor:pointer;list-style:none;padding:1.2rem 0;
+  font-family:var(--f-head);font-size:1.6rem;letter-spacing:.04em;
+  display:flex;justify-content:space-between;gap:1rem;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding-bottom:1.2rem}
+
+/* Slot-CTA */
+.final-cta{
+  text-align:center;
+  background:
+    linear-gradient(rgba(42,11,11,.7),rgba(42,11,11,.85)),
+    url("assets/night-before-christmas.jpg") center/cover;
+}
+
+/* Footer */
+.footer{padding:3rem 1.5rem;text-align:center;background:var(--ink);font-size:1rem}
+.footer__logo{font-family:var(--f-head);font-size:2rem;letter-spacing:.06em;margin-bottom:.3rem}
+.footer__note{max-width:40rem;margin:1rem auto 0;opacity:.6;font-size:.9rem}
+
+/* Mobiel */
+@media (max-width:860px){
+  .nav{background:rgba(20,7,7,.92);padding:.7rem 1rem}
+  .nav__logo{font-size:1.25rem;white-space:nowrap}
+  .nav .btn--small{font-size:.95rem;padding:.55em .9em .45em;white-space:nowrap}
+  .nav__links a:not(.btn){display:none}
+  .story,.signup{grid-template-columns:1fr}
+  .story__visual,.signup__text{justify-self:center}
+  .story__visual{max-width:380px}
+  .features{grid-template-columns:1fr}
+  .gallery__grid{grid-template-columns:1fr;max-width:420px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+  .hero__video{display:none}
+  .hero{background:url("assets/poster-new-out-now.jpg") center/cover}
+}

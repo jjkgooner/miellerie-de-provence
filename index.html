@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miellerie de Provence · Romance, bottled in Provence</title>
+  <meta name="description" content="Five hand-poured perfumes where Provence honey meets dark florals, smoky woods and candlelight. Join the circle for 10% off your first order.">
+  <meta property="og:title" content="Miellerie de Provence · Romance, bottled in Provence">
+  <meta property="og:description" content="Five hand-poured perfumes where Provence honey meets dark florals, smoky woods and candlelight.">
+  <meta property="og:image" content="assets/poster-new-out-now.jpg">
+  <meta name="theme-color" content="#752323">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a class="nav__logo" href="#top" aria-label="Miellerie de Provence, back to top">Miellerie <span>de Provence</span></a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#story">Our story</a>
+      <a href="#scents">The scents</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--small" href="#signup">Join the circle</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <video class="hero__video" autoplay muted loop playsinline poster="assets/poster-new-out-now.jpg" aria-hidden="true">
+        <source src="assets/hero-video.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="script">New out now</p>
+        <h1 id="hero-title">Romance,<br>bottled in Provence.</h1>
+        <p class="hero__sub">Five hand-poured perfumes where Provence honey meets dark florals, smoky woods and candlelight. Made for those who love a little darkness.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#signup">Join the circle</a>
+          <a class="btn btn--ghost" href="#scents">Find your scent</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#story" aria-label="Scroll to our story">↓</a>
+    </section>
+
+    <!-- VERHAAL -->
+    <section class="story texture" id="story" aria-labelledby="story-title">
+      <figure class="story__visual">
+        <img src="assets/poster-new-out-now.jpg" alt="A black Miellerie de Provence bottle on dark red velvet beneath an ivory lace doily, with the words New, Out Now" loading="lazy" width="1080" height="1320">
+      </figure>
+      <div class="story__text">
+        <p class="script">Our story</p>
+        <h2 id="story-title">A forgotten love story, written in honey.</h2>
+        <p>Every bottle of Miellerie de Provence begins in the south of France, among lavender fields and humming beehives. <em>Miellerie</em> means honey house, and honey is where every scent starts.</p>
+        <p>We blend real Provence honey with dark florals, smoky woods and candlelit warmth to create perfumes that feel like a forgotten love story: sweet, but never innocent.</p>
+        <p class="story__sign">Hand-poured. Wax-sealed. Made to be remembered.</p>
+
+        <ul class="features">
+          <li><strong>Real Provence honey</strong> Every scent contains honey from our own hives.</li>
+          <li><strong>Hand-poured &amp; wax-sealed</strong> Each bottle is filled and sealed by hand.</li>
+          <li><strong>Long-lasting</strong> Eau de parfum with up to 10 hours of wear.</li>
+          <li><strong>Gift-ready</strong> Wrapped in velvet, with an optional handwritten note.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GEUREN -->
+    <section class="scents" id="scents" aria-labelledby="scents-title">
+      <div class="section-head">
+        <p class="script">The collection</p>
+        <h2 id="scents-title">Five scents. Which one haunts you?</h2>
+      </div>
+      <ol class="scent-list">
+        <li class="scent">
+          <span class="scent__no">I</span>
+          <h3>Rose Noire</h3>
+          <p class="scent__tag">The dark rose</p>
+          <p>A rose that only blooms after dark. Velvety black rose opens onto smoky oud and settles into a warm trail of smoked honey.</p>
+          <p class="scent__notes">black rose · oud · smoked honey</p>
+        </li>
+        <li class="scent">
+          <span class="scent__no">II</span>
+          <h3>Velours Rouge</h3>
+          <p class="scent__tag">The velvet seduction</p>
+          <p>Soft as velvet, deep as wine. Juicy black cherry melts into glowing amber and creamy vanilla.</p>
+          <p class="scent__notes">black cherry · amber · vanilla</p>
+        </li>
+        <li class="scent">
+          <span class="scent__no">III</span>
+          <h3>Miel de Minuit</h3>
+          <p class="scent__tag">The midnight honey</p>
+          <p>Golden honey for the darkest hours. Lavender honey from our own hives, warm beeswax and a curl of incense.</p>
+          <p class="scent__notes">lavender honey · beeswax · incense</p>
+        </li>
+        <li class="scent">
+          <span class="scent__no">IV</span>
+          <h3>Lavande Éternelle</h3>
+          <p class="scent__tag">The eternal lavender</p>
+          <p>Provence, preserved forever. Sun-warmed lavender, powdery iris and soft white musk, like a pressed flower in an old love letter.</p>
+          <p class="scent__notes">lavender · iris · white musk</p>
+        </li>
+        <li class="scent">
+          <span class="scent__no">V</span>
+          <h3>Bougie Sacrée</h3>
+          <p class="scent__tag">The sacred candle</p>
+          <p>The warmth of a hundred candles. Resinous myrrh, melted wax and dried petals for slow evenings.</p>
+          <p class="scent__notes">myrrh · candle wax · dried petals</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- GALERIJ -->
+    <section class="gallery texture" aria-labelledby="gallery-title">
+      <div class="section-head">
+        <p class="script">Seen on our feed</p>
+        <h2 id="gallery-title">Dark. Sweet. Yours.</h2>
+      </div>
+      <div class="gallery__grid">
+        <figure>
+          <img src="assets/rose-noire-poster.jpg" alt="Rose Noire bottle on a red textured background beneath a lace doily, with the words New, Out Now" loading="lazy" width="1080" height="1320">
+          <figcaption>Rose Noire · new out now</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/valentines-forever.jpg" alt="Valentine's Forever campaign: a black bottle surrounded by silver filigree hearts, with code CUPID25 for 25% off" loading="lazy" width="928" height="1134">
+          <figcaption>Valentine's Forever</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/night-before-christmas.jpg" alt="The Night Before Christmas campaign: Rose Noire bottle between lit Christmas trees on a red background" loading="lazy" width="768" height="1365">
+          <figcaption>The Night Before Christmas</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" aria-labelledby="reviews-title">
+      <h2 id="reviews-title" class="visually-hidden">What our circle says</h2>
+      <blockquote>
+        <p>“It smells like a love letter written by candlelight. I get compliments every time I wear Rose Noire.”</p>
+        <cite>Elise, Ghent</cite>
+      </blockquote>
+      <blockquote>
+        <p>“Velours Rouge is my new date-night scent. Warm, sweet and a little dangerous.”</p>
+        <cite>Noah, Antwerp</cite>
+      </blockquote>
+      <blockquote>
+        <p>“The packaging alone feels like opening a secret. Miel de Minuit lasts all day.”</p>
+        <cite>Camille, Brussels</cite>
+      </blockquote>
+    </section>
+
+    <!-- CTA + NIEUWSBRIEF -->
+    <section class="signup texture" id="signup" aria-labelledby="signup-title">
+      <div class="signup__text">
+        <p class="script">Join the circle</p>
+        <h2 id="signup-title">Be the first to bloom in the dark.</h2>
+        <p>Sign up for our newsletter and receive <strong>10% off your first order</strong>, early access to new scents, limited editions and private member offers.</p>
+        <p class="signup__small">No spam, only love letters. Unsubscribe anytime with one click.</p>
+      </div>
+      <div class="signup__form">
+        <!-- MailerLite embedded form (HTML-embed) · account 2730528 · form 203746583253092262 -->
+        <div id="mlb2-48351811" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-48351811">
+          <div class="ml-form-embedWrapper embedForm">
+
+            <div class="ml-form-embedBody row-form">
+              <div class="ml-form-embedContent">
+                <h4>Newsletter</h4>
+                <p>Sign up for news and special offers.</p>
+              </div>
+
+              <form class="ml-block-form" action="https://dashboard.mailerlite.com/jsonp/2730528/forms/203746583253092262/subscribe" data-code="" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow">
+                    <div class="ml-field-group ml-field-name">
+                      <label class="visually-hidden" for="ml-name">Name</label>
+                      <input id="ml-name" aria-label="name" type="text" class="form-control" data-inputmask="" name="fields[name]" placeholder="Name" autocomplete="given-name">
+                    </div>
+                  </div>
+                  <div class="ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                      <label class="visually-hidden" for="ml-email">Email</label>
+                      <input id="ml-email" aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Email" autocomplete="email" required>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ml-form-embedPermissions">
+                  <div class="ml-form-embedPermissionsContent default">
+                    <h4>Marketing permissions</h4>
+                    <p>The information you provide on this form will only be used to provide you with updates and personalized marketing. Your privacy is important to us! Please let us know how you would like to keep in touch:</p>
+                    <div class="ml-form-embedPermissionsOptions">
+                      <div class="ml-form-embedPermissionsOptionsCheckbox">
+                        <label>
+                          <input type="checkbox" name="gdpr[]" value="Email">
+                          <span class="label-description">Email</span>
+                        </label>
+                        <div class="description">We will send you occasional emails about promotions, new products and important updates to keep you in the loop.</div>
+                      </div>
+                      <div class="ml-form-embedPermissionsOptionsCheckbox">
+                        <label>
+                          <input type="checkbox" name="gdpr[]" value="Customized online advertising">
+                          <span class="label-description">Customized online advertising</span>
+                        </label>
+                        <div class="description">We will use your information to show you ads that are more relevant to you to improve your online experience.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ml-form-embedMailerLite-GDPR">
+                    <p>By clicking below to submit this form, you acknowledge that the information you provide will be processed in accordance with our Privacy Policy.</p>
+                  </div>
+                </div>
+
+                <input type="hidden" name="ml-submit" value="1">
+                <div class="ml-form-embedSubmit">
+                  <button type="submit" class="primary">Subscribe</button>
+                  <button disabled="disabled" style="display:none" type="button" class="loading">
+                    <span class="ml-form-embedSubmitLoad"></span>
+                    <span class="visually-hidden">Loading...</span>
+                  </button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true">
+              </form>
+            </div>
+
+            <div class="ml-form-successBody row-success" style="display:none">
+              <div class="ml-form-successContent">
+                <h4>Thank you!</h4>
+                <p>You have successfully joined our subscriber list. Check your inbox for your welcome gift.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <script>
+          function ml_webform_success_48351811() {
+            var $ = ml_jQuery || jQuery;
+            $('.ml-subscribe-form-48351811 .row-success').show();
+            $('.ml-subscribe-form-48351811 .row-form').hide();
+          }
+        </script>
+        <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519"></script>
+        <script>
+          fetch("https://assets.mailerlite.com/jsonp/2730528/forms/203746583253092262/takel");
+        </script>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="script">Questions</p>
+        <h2 id="faq-title">Before you fall in love</h2>
+      </div>
+      <details>
+        <summary>How long does the scent last?</summary>
+        <p>Our perfumes are eau de parfum and last up to 8–10 hours on the skin, longer on clothing.</p>
+      </details>
+      <details>
+        <summary>Which scent should I choose?</summary>
+        <p>Love sweet and warm? Try Miel de Minuit or Velours Rouge. Prefer dark and mysterious? Rose Noire. Soft and nostalgic? Lavande Éternelle. Cosy and smoky? Bougie Sacrée. Still unsure? The Discovery Set lets you try all five.</p>
+      </details>
+      <details>
+        <summary>Is the honey real?</summary>
+        <p>Yes. We use honey extract from our own hives in Provence in every blend.</p>
+      </details>
+      <details>
+        <summary>What happens with my data?</summary>
+        <p>We only use your name and email address to send you our newsletter, and only if you give permission. You can unsubscribe at any moment via the link in every email.</p>
+      </details>
+    </section>
+
+    <!-- SLOT-CTA -->
+    <section class="final-cta">
+      <p class="script">Made in Provence</p>
+      <h2>Meant for midnight.</h2>
+      <a class="btn" href="#signup">Claim your 10% welcome gift</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__logo">Miellerie <span>de Provence</span></p>
+    <p>#MielleriedeProvence · #ScentedRomance</p>
+    <p class="footer__note">Miellerie de Provence is a fictional brand created for a school project (Creative Automation, Arteveldehogeschool, Lyo Massart). Reviews are fictional examples.</p>
+  </footer>
+
+</body>
+</html>
